@@ -44,5 +44,13 @@ puts all_contacts.inspect
 
 # 2. How many contacts work at Apple?
 apple_contacts = Contact.where({"company_id" => apple["id"]})
+puts "Apple contacts: #{apple_contacts.count}"
 
 # 3. What is the full name of each contact who works at Apple?
+for contact in apple_contacts
+    # puts contact.inspect
+    first_name = contact ["first_name"]
+    last_name = contact ["last_name"]
+
+    puts "#{first_name} #{last_name}"
+end
